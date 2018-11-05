@@ -30,7 +30,7 @@ namespace TwitterPredictiveCalculatorWebsite
             var results = JObject.Parse(response.Content);
             string prediction = results["Results"]["output1"]["value"]["Values"][0][0].ToString();
 
-            lblResults.Text = Convert.ToDecimal(prediction).ToString("#0.##%");
+            lblResults.Text = "We predict this tweet will get " + Math.Round(Convert.ToDecimal(prediction), 0).ToString() + " retweets.";
         }
     }
 }

@@ -12,7 +12,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="panel">
             <div class="container-row">
                 <div class="flex-item">
                     <h2>Twitter Re-Tweet Prediction Calculator</h2>
@@ -28,6 +28,7 @@
                             <asp:ListItem>Male</asp:ListItem>
                             <asp:ListItem>Female</asp:ListItem>
                         </asp:RadioButtonList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Required Field" ControlToValidate="rblGender"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="flex-item2">
@@ -39,6 +40,7 @@
                             <asp:ListItem Value="1">Yes</asp:ListItem>
                             <asp:ListItem Value="0">No</asp:ListItem>
                         </asp:RadioButtonList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required Field" ControlToValidate="rblReshare"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
@@ -46,16 +48,16 @@
                 <div class="flex-item3">
                     <p>Klout</p>
                     <asp:TextBox ID="txtKlout" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtKlout"></asp:RequiredFieldValidator>
-                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="RangeValidator" MaximumValue="100" MinimumValue="0" ControlToValidate="txtKlout" Visible="True" Type="Integer"></asp:RangeValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Required Field" ControlToValidate="txtKlout"></asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Please Enter a Range Between 0 and 100" MaximumValue="100" MinimumValue="0" ControlToValidate="txtKlout" Visible="True" Type="Integer"></asp:RangeValidator>
                    
                 </div>
 
                 <div class="flex-item3">
                     <p>Sentiment</p>
                     <asp:TextBox ID="txtSentiment" runat="server"></asp:TextBox>
-                          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="txtSentiment"></asp:RequiredFieldValidator>
-                          <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="RangeValidator" MaximumValue="3" MinimumValue="-3" ControlToValidate="txtSentiment" Visible="True" Type="Integer"></asp:RangeValidator>
+                          <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Required Field" ControlToValidate="txtSentiment"></asp:RequiredFieldValidator>
+                          <asp:RangeValidator ID="RangeValidator2" runat="server" ErrorMessage="Please Enter a Range Between -3 and 3" MaximumValue="3" MinimumValue="-3" ControlToValidate="txtSentiment" Visible="True" Type="Integer"></asp:RangeValidator>
                     
                 </div>
             </div>
